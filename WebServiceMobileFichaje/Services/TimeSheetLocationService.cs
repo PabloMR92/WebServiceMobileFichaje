@@ -23,7 +23,7 @@ namespace WebServiceMobileFichaje.Services
             {
                 CoordenadaX = x.CoordenadaX,
                 CoordenadaY = x.CoordenadaY,
-                TimeSheetLocationID = x.TimeSheetLocationID,
+                TimeSheetLocationID = x.TimeSheetLocacionID,
                 RadioPermitido = x.RadioPermitido
             }).ToList();
         }
@@ -32,7 +32,7 @@ namespace WebServiceMobileFichaje.Services
         {
             return _repo.Query.Select(x => new TimeSheetLocationListItemViewModel()
             {
-                TimeSheetLocationID = x.TimeSheetLocationID,
+                TimeSheetLocationID = x.TimeSheetLocacionID,
                 Descripcion = x.Descripcion
             }).ToList();
         }

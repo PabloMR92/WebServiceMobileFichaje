@@ -32,7 +32,7 @@ namespace WebServiceMobileFichaje.Controllers
                 {
                     LogIn = usuario.LogIn,
                     GrupoID = usuario.GrupoID,
-                    TimeSheetLocationID = establecimiento.TimeSheetLocationID,
+                    TimeSheetLocacionID = establecimiento.TimeSheetLocationID,
                     NumeroDispositivo = 3,
                     Fecha = actualLocation.Timestamp.ToString()
                 });

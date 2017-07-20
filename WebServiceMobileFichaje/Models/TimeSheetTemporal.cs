@@ -12,7 +12,7 @@ namespace WebServiceMobileFichaje.Models
         public int TimeSheetTemporalID { get; set; }
         public string LogIn { get; set; }
         public string Fecha  { get; set; }
-        public int TimeSheetLocationID { get; set; }
+        public int TimeSheetLocacionID { get; set; }
         public int NumeroDispositivo { get; set; }
         public int GrupoID { get; set; }
     }

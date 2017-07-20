@@ -32,10 +32,10 @@ namespace WebServiceMobileFichaje.Services
             var tipoHorarioIdParameter = new SqlParameter("@TipoHorarioId", request.tipoHorarioID);
             var desdeParameter = new SqlParameter("@Desde", desde.ToString("s") );
             var hastaIdParameter = new SqlParameter("@Hasta", hasta.ToString("s") );
-            var TimeSheetLocationIdParameter = new SqlParameter("@TimeSheetLocationId", request.locationID);
+            var TimeSheetLocacionIdParameter = new SqlParameter("@TimeSheetLocacionId", request.locationID);
 
-            return _repoViewModel.StoreProcedure("REP_TimeSheet_Cons_sp @UsuarioId, @TipoHorarioId, @Desde, @Hasta, @TimeSheetLocationId"
-                    , usuarioIdParameter, tipoHorarioIdParameter, desdeParameter, hastaIdParameter, TimeSheetLocationIdParameter).ToList().ParseTo<ReporteIngresoEgresoViewModel>();                    
+            return _repoViewModel.StoreProcedure("REP_TimeSheet_Cons_sp @UsuarioId, @TipoHorarioId, @Desde, @Hasta, @TimeSheetLocacionId"
+                    , usuarioIdParameter, tipoHorarioIdParameter, desdeParameter, hastaIdParameter, TimeSheetLocacionIdParameter).ToList().ParseTo<ReporteIngresoEgresoViewModel>();                    
         }        
     }
 }

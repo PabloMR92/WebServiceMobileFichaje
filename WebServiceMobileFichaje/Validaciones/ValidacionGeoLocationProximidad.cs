@@ -44,6 +44,8 @@ namespace WebServiceMobileFichaje.Validaciones
 
         public bool esProximo(TimeSheetLocationViewModel establecimiento, GeoLocationTimeSheet location)
         {
+            if (establecimiento.CoordenadaX == null || establecimiento.CoordenadaY == null)
+                return false;
             var ubicacionEstablecimiento = new GeoCoordinate((double)establecimiento.CoordenadaX, (double)establecimiento.CoordenadaY);
             var ubicacionUsuario = new GeoCoordinate((double)location.CoordenadaX, (double)location.CoordenadaY);
             var distancia = (double)ubicacionUsuario.GetDistanceTo(ubicacionEstablecimiento);

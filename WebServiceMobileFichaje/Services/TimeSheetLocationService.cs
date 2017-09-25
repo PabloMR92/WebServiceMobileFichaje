@@ -19,13 +19,15 @@ namespace WebServiceMobileFichaje.Services
 
         public List<TimeSheetLocationViewModel> GetLocations()
         {
-            return _repo.Query.Select(x => new TimeSheetLocationViewModel()
-            {
-                CoordenadaX = x.CoordenadaX,
-                CoordenadaY = x.CoordenadaY,
-                TimeSheetLocationID = x.TimeSheetLocacionID,
-                RadioPermitido = x.RadioPermitido
-            }).ToList();
+            return _repo.Query
+                .Where(x => x.CoordenadaX != null && x.CoordenadaY != null && x.RadioPermitido != null)
+                .Select(x => new TimeSheetLocationViewModel()
+                {
+                    CoordenadaX = x.CoordenadaX,
+                    CoordenadaY = x.CoordenadaY,
+                    TimeSheetLocationID = x.TimeSheetLocacionID,
+                    RadioPermitido = x.RadioPermitido
+                }).ToList();
         }
 
         public List<TimeSheetLocationListItemViewModel> GetLocationsItemList()

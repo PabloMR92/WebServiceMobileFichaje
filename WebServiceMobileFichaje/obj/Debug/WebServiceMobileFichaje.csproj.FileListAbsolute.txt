@@ -265,3 +265,6 @@ C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\es\
 C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\obj\Debug\WebServiceMobileFichaje.csprojResolveAssemblyReference.cache
 C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\obj\Debug\WebServiceMobileFichaje.dll
 C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\obj\Debug\WebServiceMobileFichaje.pdb
+C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\Swashbuckle.Core.dll
+C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\WebActivatorEx.dll

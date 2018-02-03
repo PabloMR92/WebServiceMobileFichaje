@@ -26,8 +26,10 @@ namespace WebServiceMobileFichaje.Services
 
         public bool ExisteUUIDParaUsuario(string login)
         {
-            var usuario = _repo.Query.Where(y => y.LogIn == login).FirstOrDefault();
-            var UUID = usuario.UUID;
+            var usuarioID = new SqlParameter("@SQLLogin", login);
+            var _timeSheetUsuarioID = _db.Database.SqlQuery<int>("TimeSheetUsuario_FromSqlLogin @SQLLogin", usuarioID).FirstOrDefault();
+            var _usuario = _repo.Query.Where(x => x.TimeSheetUsuarioID == _timeSheetUsuarioID).FirstOrDefault();
+            var UUID = _usuario.UUID;
             return (UUID != null || UUID == "");
         }
 

@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Data.Entity;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
-using System.Data.SqlClient;
-using WebServiceMobileFichaje.ViewModels;
 using WebServiceMobileFichaje.Models;
-using WebServiceMobileFichaje.Repository;
 using WebServiceMobileFichaje.Services;
-using WebServiceMobileFichaje.Context;
-using System.Threading.Tasks;
+using WebServiceMobileFichaje.ViewModels;
 
 namespace WebServiceMobileFichaje.Controllers
 {

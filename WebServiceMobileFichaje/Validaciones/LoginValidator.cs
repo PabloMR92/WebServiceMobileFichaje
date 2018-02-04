@@ -13,6 +13,7 @@ namespace WebServiceMobileFichaje.Validaciones
     {
         public LoginValidator()
         {
+            RuleFor(model => model.dni).NotEmpty().WithMessage("El DNI es requerido");
             RuleFor(model => model.login).NotEmpty().WithMessage("El Usuario es requerido"); 
             RuleFor(model => model.password).NotEmpty().WithMessage("La contraseña es requerida"); 
             When(x => (x.login != null && x.login != "") && (x.password != null && x.password != ""), () => {

@@ -13,19 +13,23 @@ namespace WebServiceMobileFichaje.Validaciones
 {
     public class ValidacionUsuarioUUIDSinAsignar : PropertyValidator
     {
+        private readonly TimeSheetUsuarioService service;
+
         public ValidacionUsuarioUUIDSinAsignar()
-        : base("Ya tiene un dispositivo asociado a la aplicación. Contáctese con un administrador.") {  }
+        : base("Ya tiene un dispositivo asociado a la aplicación. Contáctese con un administrador.")
+        {
+            var repo = UnityConfig.container.Resolve<IRepository<TimeSheetUsuario>>();
+            var db = UnityConfig.container.Resolve<DbContext>();
+            service = new TimeSheetUsuarioService(repo, db);
+        }
 
         protected override bool IsValid(PropertyValidatorContext context)
         {
             var user = context.PropertyValue as LoginUsuario;
-            var repo = UnityConfig.container.Resolve<IRepository<TimeSheetUsuario>>();
-            var db = UnityConfig.container.Resolve<DbContext>();
-            var service = new TimeSheetUsuarioService(repo, db);
-            if (service.ExisteUUIDParaUsuario(user.login))
+            if (service.ExisteUUIDParaUsuario(user.login, user.dni))
                 return false;
             else
-                return true; 
+                return true;
         }
     }
 }

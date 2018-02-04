@@ -9,5 +9,7 @@ namespace WebServiceMobileFichaje.Models
     {
         public string login { get; set; }
         public string password { get; set; }
+        public string dni { get; set; }
+
     }
 }

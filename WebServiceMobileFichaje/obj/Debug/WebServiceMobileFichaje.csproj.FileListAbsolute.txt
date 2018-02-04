@@ -268,3 +268,4 @@ C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\obj\Deb
 C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\Swashbuckle.Core.dll
 C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\bin\WebActivatorEx.dll
+C:\Users\Pablo\Documents\WebServiceMobileFichaje\WebServiceMobileFichaje\obj\Debug\WebServiceMobileFichaje.csproj.CoreCompileInputs.cache

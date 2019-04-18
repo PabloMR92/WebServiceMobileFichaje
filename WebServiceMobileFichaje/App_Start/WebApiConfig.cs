@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
+﻿using Newtonsoft.Json.Serialization;
+using Ninject;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using WebServiceMobileFichaje.Authorization.ActionFilter;
+using WebServiceMobileFichaje.Authorization.Service;
+using WebServiceMobileFichaje.Domain.Services.Business;
+using WebServiceMobileFichaje.Filter;
 
 namespace WebServiceMobileFichaje
 {
@@ -12,16 +15,22 @@ namespace WebServiceMobileFichaje
         {
             // Configuración y servicios de API web
 
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+
             // Rutas de API web
             config.MapHttpAttributeRoutes();
-            FluentValidation.WebApi.FluentValidationModelValidatorProvider.Configure(config);
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            config.Formatters.JsonFormatter.SupportedMediaTypes
-                 .Add(new MediaTypeHeaderValue("text/html"));
+            config.Filters.Add(new ValidateViewModelAttribute());
+            config.Filters.Add(new ApiExceptionFilterAttribute());
+
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
         }
     }
 }

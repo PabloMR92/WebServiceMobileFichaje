@@ -37,7 +37,10 @@ namespace WebServiceMobileFichaje.Domain.Services.Business
                  GrupoID = currentUser.GrupoId,
                  TimeSheetLocacionID = nearestLocation.TimeSheetLocationID,
                  NumeroDispositivo = MobileDeviceNumber,
-                 Fecha = currentLocation.Timestamp.ToString()
+                 Fecha = currentLocation.Timestamp.ToString(),
+                 CoordenadaX = currentLocation.CoordenadaX,
+                 CoordenadaY = currentLocation.CoordenadaY,
+                 Distancia = nearestLocation.Distancia
              });
 
             await _repo.SaveAsync();

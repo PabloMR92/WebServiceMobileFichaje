@@ -11,5 +11,8 @@ namespace WebServiceMobileFichaje.Domain.EF.Model
         public int TimeSheetLocacionID { get; set; }
         public int NumeroDispositivo { get; set; }
         public int GrupoID { get; set; }
+        public decimal? CoordenadaX { get; set; }
+        public decimal? CoordenadaY { get; set; }
+        public double Distancia { get; set; }
     }
 }

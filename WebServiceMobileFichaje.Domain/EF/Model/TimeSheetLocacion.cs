@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebServiceMobileFichaje.Domain.EF.Model
 {
@@ -11,5 +12,6 @@ namespace WebServiceMobileFichaje.Domain.EF.Model
         public decimal? CoordenadaX { get; set; }
         public decimal? CoordenadaY { get; set; }
         public decimal? RadioPermitido { get; set; }
+        public virtual ICollection<TimeSheetDispositivo> Dispositivos { get; set; }
     }
 }

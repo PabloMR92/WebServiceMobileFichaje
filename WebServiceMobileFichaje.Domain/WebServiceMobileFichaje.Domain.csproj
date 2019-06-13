@@ -108,6 +108,7 @@
     <Compile Include="EF\Model\IMultiTenant.cs" />
     <Compile Include="EF\Model\InOutUserReport.cs" />
     <Compile Include="EF\Model\TimeSheet.cs" />
+    <Compile Include="EF\Model\TimeSheetDispositivo.cs" />
     <Compile Include="EF\Model\TimeSheetLocacion.cs" />
     <Compile Include="EF\Model\TimeSheetTemporal.cs" />
     <Compile Include="EF\Model\TimeSheetUsuario.cs" />
@@ -118,11 +119,13 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Services\Authorization\LoginService.cs" />
+    <Compile Include="Services\Business\ConfigurationService.cs" />
     <Compile Include="Services\Business\LocationService.cs" />
     <Compile Include="Services\Business\ReportService.cs" />
     <Compile Include="Transfer\Business\InOutUserReport.cs" />
     <Compile Include="Transfer\Business\InOutUserReportRequest.cs" />
     <Compile Include="Transfer\Business\InOutUserReportResult.cs" />
+    <Compile Include="Transfer\Business\MobileConfiguration.cs" />
     <Compile Include="Transfer\Business\ScheduleType.cs" />
     <Compile Include="Services\Business\ScheduleTypeService.cs" />
     <Compile Include="Services\Business\TimeSheetTemporalService.cs" />

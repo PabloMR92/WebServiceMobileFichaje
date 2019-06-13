@@ -169,6 +169,7 @@
     <Compile Include="Controllers\Authorization\LoginController.cs" />
     <Compile Include="Controllers\Authorization\TokenInfoController.cs" />
     <Compile Include="Controllers\Business\ClockInController.cs" />
+    <Compile Include="Controllers\Business\ConfigurationController.cs" />
     <Compile Include="Controllers\Business\LocationController.cs" />
     <Compile Include="Controllers\Business\ReportController.cs" />
     <Compile Include="Controllers\Business\ScheduleTypeController.cs" />

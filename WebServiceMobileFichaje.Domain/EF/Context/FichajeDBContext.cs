@@ -16,6 +16,7 @@ namespace WebServiceMobileFichaje.Domain.EF.Context
             Database.SetInitializer<FichajeDBContext>(null);
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<TimeSheetLocacion>().ToTable("TimeSheetLocacion");
+            modelBuilder.Entity<TimeSheetDispositivo>().ToTable("TimeSheetDispositivo");
             modelBuilder.Entity<TimeSheetUsuario>().ToTable("TimeSheetUsuario");
             modelBuilder.Entity<TimeSheetTemporal>().ToTable("TimeSheetTemporal");
             modelBuilder.Entity<TipoDeHorario>().ToTable("TipoDeHorario");
